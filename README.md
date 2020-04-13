@@ -1,3 +1,5 @@
+Что получилось: https://victoriazubareva.github.io/aviasales_frontend/
+
 # Тестовое задание Aviasales ([frontend](https://aviasales.recruitee.com/o/frontend-developer-js-coffeescript-react%C2%A0redux--aviasalesru))
 
 Основной frontend проект нашей команды — это страница выдачи билетов со множеством фильтров, настроек и, собственно, билетов.
@@ -12,7 +14,7 @@
 - Работоспособность в актуальной версии Google Chrome
 - Остальное на твоё усмотрение
 
-## Документация по работе с сервером: [Здесь](https://github.com/KosyanMedia/test-tasks/blob/master/aviasales_frontend/server.md)
+## Документация по работе с сервером: [Здесь](https://github.com/victoriaZubareva/aviasales_frontend/blob/master/server.md)
 
 ## Макет
 
