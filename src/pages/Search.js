@@ -5,6 +5,8 @@ import { TicketList } from "../components/TicketList/TicketList";
 import { Sorting } from "../components/Sorting/Sorting";
 import { Alert } from "../components/Alert/Alert";
 
+import data from './testData.json' // тестовые данные
+
 export const Search = () => {
   const [tickets, setTickets] = useState([]); // неотсортированный список билетов
   const [hasError, setHasError] = useState(false);
@@ -15,19 +17,23 @@ export const Search = () => {
   const [sortTickets, setSortTickets] = useState(null);
 
   useEffect(() => {
-    fetch("https://front-test.beta.aviasales.ru/search")
-      .then(res => res.json())
-      .then(({ searchId }) =>
-        fetch(
-          `https://front-test.beta.aviasales.ru/tickets?searchId=${searchId}`
-        )
-      )
-      .then(res => res.json())
-      .then(({ tickets }) => {
-        setTickets(tickets.slice(0, 5));
-        setCloneTickets(tickets.slice(0, 5));
-      })
-      .catch(() => setHasError(true));
+      //*** закомментировала сервер aviasales, использую сохраненный json ***/
+    // fetch("https://front-test.beta.aviasales.ru/search")
+    //   .then(res => res.json())
+    //   .then(({ searchId }) =>
+    //     fetch(
+    //       `https://front-test.beta.aviasales.ru/tickets?searchId=${searchId}`
+    //     )
+    //   )
+    //   .then(res => res.json())
+    //   .then(({ tickets }) => {
+    //     setTickets(tickets.slice(0, 5));
+    //     setCloneTickets(tickets.slice(0, 5));
+    //   })
+    //   .catch(() => setHasError(true));
+    const tickets = data
+    setTickets(tickets);
+    setCloneTickets(tickets);
   }, []);
 
   useEffect(() => {
